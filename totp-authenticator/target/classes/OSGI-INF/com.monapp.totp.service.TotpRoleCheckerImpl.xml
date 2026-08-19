@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.monapp.totp.service.TotpRoleCheckerImpl" immediate="true" activate="activate" modified="activate" configuration-pid="com.monapp.totp.configuration.TotpConfiguration">
-  <service>
-    <provide interface="com.monapp.totp.service.TotpRoleChecker"/>
-  </service>
-  <reference name="_roleLocalService" interface="com.liferay.portal.kernel.service.RoleLocalService" field="_roleLocalService"/>
-  <reference name="_userLocalService" interface="com.liferay.portal.kernel.service.UserLocalService" field="_userLocalService"/>
-  <implementation class="com.monapp.totp.service.TotpRoleCheckerImpl"/>
-</scr:component>

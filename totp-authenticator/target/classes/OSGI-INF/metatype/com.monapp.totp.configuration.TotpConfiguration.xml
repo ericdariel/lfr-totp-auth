@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.1.0" localization="content/Language">
-  <OCD name="totp-configuration-name" id="com.monapp.totp.configuration.TotpConfiguration">
-    <AD name="totp-configuration-required-role-name" id="requiredRoleName" cardinality="0" required="false" default="Administrator" type="String" description="totp-configuration-required-role-description"/>
-  </OCD>
-  <Designate pid="com.monapp.totp.configuration.TotpConfiguration">
-    <Object ocdref="com.monapp.totp.configuration.TotpConfiguration"/>
-  </Designate>
-</metatype:MetaData>

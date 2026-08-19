@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.monapp.totp.unit.TOTPServiceTest
--------------------------------------------------------------------------------
-Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.841 s -- in com.monapp.totp.unit.TOTPServiceTest
