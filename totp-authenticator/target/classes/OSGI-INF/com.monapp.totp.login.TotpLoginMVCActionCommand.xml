@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.monapp.totp.login.TotpLoginMVCActionCommand" immediate="true">
+  <property name="javax.portlet.name" type="String">com_liferay_login_web_portlet_CreateAccountPortlet
+com_liferay_login_web_portlet_FastLoginPortlet
+com_liferay_login_web_portlet_ForgotPasswordPortlet
+com_liferay_login_web_portlet_LoginPortlet</property>
+  <property name="mvc.command.name" type="String" value="/login/login"/>
+  <property name="service.ranking" type="Integer" value="400"/>
+  <service>
+    <provide interface="com.liferay.portal.kernel.portlet.bridges.mvc.MVCActionCommand"/>
+  </service>
+  <reference name="_loginMVCActionCommand" interface="com.liferay.portal.kernel.portlet.bridges.mvc.MVCActionCommand" target="(component.name=lne.hook.liferay.LneCustomLoginMVCActionCommand)" field="_loginMVCActionCommand"/>
+  <reference name="_portal" interface="com.liferay.portal.kernel.util.Portal" field="_portal"/>
+  <reference name="_totpTwoFactorLoginService" interface="com.monapp.totp.service.TotpTwoFactorLoginService" field="_totpTwoFactorLoginService"/>
+  <implementation class="com.monapp.totp.login.TotpLoginMVCActionCommand"/>
+</scr:component>

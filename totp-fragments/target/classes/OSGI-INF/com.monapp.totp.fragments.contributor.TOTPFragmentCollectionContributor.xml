@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.monapp.totp.fragments.contributor.TOTPFragmentCollectionContributor" activate="activate">
+  <property name="fragment.collection.key" type="String" value="totp"/>
+  <service>
+    <provide interface="com.liferay.fragment.contributor.FragmentCollectionContributor"/>
+  </service>
+  <reference name="_servletContext" interface="javax.servlet.ServletContext" target="(osgi.web.symbolicname=com.monapp.totp.fragments)" field="_servletContext"/>
+  <reference name="fragmentCompositionLocalService" interface="com.liferay.fragment.service.FragmentCompositionLocalService" field="fragmentCompositionLocalService"/>
+  <reference name="fragmentEntryLocalService" interface="com.liferay.fragment.service.FragmentEntryLocalService" field="fragmentEntryLocalService"/>
+  <implementation class="com.monapp.totp.fragments.contributor.TOTPFragmentCollectionContributor"/>
+</scr:component>

@@ -1,0 +1,103 @@
+<div class="totp-setup-wrapper">
+
+    <!-- État : déjà configuré -->
+    <div class="totp-already-configured d-none">
+        <div class="card border-success text-center p-4">
+            <div class="mb-3"><span class="totp-icon-check">✅</span></div>
+            <h5 class="text-success fw-bold">[@liferay.language key="totp-setup-already-configured-title" /]</h5>
+            <p class="text-muted">[@liferay.language key="totp-setup-already-configured-description" /]</p>
+            <button class="btn btn-outline-danger btn-sm mt-2" data-totp="btnReset" type="button">
+                [@liferay.language key="totp-setup-reconfigure" /]
+            </button>
+        </div>
+    </div>
+
+    <!-- État : configuration requise -->
+    <div class="totp-setup-form">
+        <div class="card shadow-sm">
+
+            <div class="card-header totp-header-warning">
+                <span class="fw-bold">🔐 [@liferay.language key="totp-setup-header" /]</span>
+            </div>
+
+            <div class="card-body">
+
+                <div class="totp-i18n-source" data-totp="i18n" aria-hidden="true">
+                    <span data-i18n-key="totp-error-session-expired">[@liferay.language key="totp-error-session-expired" /]</span>
+                    <span data-i18n-key="totp-session-expired-logout-link">[@liferay.language key="totp-session-expired-logout-link" /]</span>
+                    <span data-i18n-key="totp-error-server-totp-rest">[@liferay.language key="totp-error-server-totp-rest" /]</span>
+                    <span data-i18n-key="totp-error-load-config">[@liferay.language key="totp-error-load-config" /]</span>
+                    <span data-i18n-key="totp-error-qr-unavailable">[@liferay.language key="totp-error-qr-unavailable" /]</span>
+                    <span data-i18n-key="totp-setup-qr-alt">[@liferay.language key="totp-setup-qr-alt" /]</span>
+                    <span data-i18n-key="totp-error-connection">[@liferay.language key="totp-error-connection" /]</span>
+                    <span data-i18n-key="totp-setup-backup-download-header">[@liferay.language key="totp-setup-backup-download-header" /]</span>
+                    <span data-i18n-key="totp-error-code-6-digits">[@liferay.language key="totp-error-code-6-digits" /]</span>
+                    <span data-i18n-key="totp-verifying">[@liferay.language key="totp-verifying" /]</span>
+                    <span data-i18n-key="totp-error-server-retry">[@liferay.language key="totp-error-server-retry" /]</span>
+                    <span data-i18n-key="totp-setup-activate">[@liferay.language key="totp-setup-activate" /]</span>
+                    <span data-i18n-key="totp-connecting">[@liferay.language key="totp-connecting" /]</span>
+                    <span data-i18n-key="totp-error-invalid-code">[@liferay.language key="totp-error-invalid-code" /]</span>
+                    <span data-i18n-key="totp-setup-reset-confirm">[@liferay.language key="totp-setup-reset-confirm" /]</span>
+                </div>
+
+                <div class="totp-alert-error alert alert-danger d-none"></div>
+
+                <!-- Étape 1 : QR Code -->
+                <div class="totp-step mb-4">
+                    <h6 class="fw-bold">
+                        <span class="badge bg-primary me-2">1</span>
+                        [@liferay.language key="totp-setup-step1-title" /]
+                    </h6>
+                    <div class="text-center my-3">
+                        <div class="totp-qr-placeholder border rounded p-3 d-inline-block"
+                             data-totp="qrCode"></div>
+                    </div>
+                    <p class="text-muted small text-center">
+                        [@liferay.language key="totp-setup-manual-key-hint" /]
+                    </p>
+                    <div class="input-group">
+                        <input type="text" class="form-control text-center font-monospace"
+                               data-totp="secretKey" readonly />
+                        <button class="btn btn-outline-secondary"
+                                data-totp="btnCopy" type="button">📋</button>
+                    </div>
+                </div>
+
+                <!-- Étape 2 : Codes de secours -->
+                <div class="totp-step mb-4">
+                    <h6 class="fw-bold">
+                        <span class="badge bg-primary me-2">2</span>
+                        [@liferay.language key="totp-setup-step2-title" /]
+                    </h6>
+                    <div class="alert alert-warning small">
+                        ⚠️ [@liferay.language key="totp-setup-backup-warning" /]
+                    </div>
+                    <div class="totp-backup-grid row row-cols-2 g-2 font-monospace small text-center"
+                         data-totp="backupCodes"></div>
+                    <button class="btn btn-outline-secondary btn-sm mt-3 w-100"
+                            data-totp="btnDownload" type="button">
+                        ⬇️ [@liferay.language key="totp-setup-download-backup-codes" /]
+                    </button>
+                </div>
+
+                <!-- Étape 3 : Confirmation -->
+                <div class="totp-step">
+                    <h6 class="fw-bold">
+                        <span class="badge bg-primary me-2">3</span>
+                        [@liferay.language key="totp-setup-step3-title" /]
+                    </h6>
+                    <input type="text"
+                           class="form-control form-control-lg text-center totp-code-input mb-2"
+                           data-totp="confirmCode"
+                           placeholder="000000" maxlength="6" autocomplete="off" />
+                    <button class="btn totp-btn-activate w-100"
+                            data-totp="btnConfirm" type="button">
+                        [@liferay.language key="totp-setup-activate" /]
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

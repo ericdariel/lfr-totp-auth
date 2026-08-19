@@ -1,0 +1,74 @@
+<div class="totp-verify-wrapper">
+    <div class="card shadow text-center">
+
+        <div class="card-body p-4">
+            <div class="totp-i18n-source" data-totp="i18n" aria-hidden="true">
+                <span data-i18n-key="totp-error-session-expired">[@liferay.language key="totp-error-session-expired" /]</span>
+                <span data-i18n-key="totp-session-expired-logout-link">[@liferay.language key="totp-session-expired-logout-link" /]</span>
+                <span data-i18n-key="totp-verifying">[@liferay.language key="totp-verifying" /]</span>
+                <span data-i18n-key="totp-connecting">[@liferay.language key="totp-connecting" /]</span>
+                <span data-i18n-key="totp-verify-button">[@liferay.language key="totp-verify-button" /]</span>
+                <span data-i18n-key="totp-verify-backup-button">[@liferay.language key="totp-verify-backup-button" /]</span>
+                <span data-i18n-key="totp-verify-use-backup">[@liferay.language key="totp-verify-use-backup" /]</span>
+                <span data-i18n-key="totp-verify-use-authenticator">[@liferay.language key="totp-verify-use-authenticator" /]</span>
+                <span data-i18n-key="totp-error-server-retry">[@liferay.language key="totp-error-server-retry" /]</span>
+                <span data-i18n-key="totp-error-connection">[@liferay.language key="totp-error-connection" /]</span>
+                <span data-i18n-key="totp-error-backup-invalid">[@liferay.language key="totp-error-backup-invalid" /]</span>
+                <span data-i18n-key="totp-error-code-incorrect">[@liferay.language key="totp-error-code-incorrect" /]</span>
+                <span data-i18n-key="totp-error-code-exactly-6-digits">[@liferay.language key="totp-error-code-exactly-6-digits" /]</span>
+                <span data-i18n-key="totp-error-backup-invalid-format">[@liferay.language key="totp-error-backup-invalid-format" /]</span>
+            </div>
+            <div class="totp-shield-icon mb-3">🔐</div>
+            <h4 class="fw-bold mb-1">[@liferay.language key="totp-verify-title" /]</h4>
+            <p class="text-muted small mb-4">
+                [@liferay.language key="totp-verify-description" /]
+            </p>
+
+            <div class="alert alert-danger d-none totp-verify-error" role="alert"></div>
+
+            <div class="input-group justify-content-center mb-3">
+                <input type="text"
+                       class="form-control form-control-lg text-center totp-code-input"
+                       data-totp="totpCode"
+                       placeholder="000000" maxlength="6"
+                       autocomplete="off" autofocus />
+            </div>
+
+            <button class="btn btn-primary w-100 mb-3"
+                    data-totp="btnVerify" type="button">
+                [@liferay.language key="totp-verify-button" /]
+            </button>
+
+            <div class="totp-backup-toggle">
+                <a href="#" data-totp="toggleBackup" class="small text-muted">
+                    [@liferay.language key="totp-verify-use-backup" /]
+                </a>
+            </div>
+
+            <div class="totp-backup-section d-none mt-3"
+                 data-totp="backupSection">
+                <input type="text"
+                       class="form-control text-center font-monospace"
+                       data-totp="backupCode"
+                       placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="19"
+                       autocomplete="off" />
+                <button class="btn btn-outline-secondary w-100 mt-2"
+                        data-totp="btnBackupVerify" type="button">
+                    [@liferay.language key="totp-verify-backup-button" /]
+                </button>
+            </div>
+        </div>
+
+        <div class="card-footer text-muted small">
+            [@liferay.language key="totp-verify-timer-hint" /]
+            <div class="totp-timer mt-1">
+                <div class="progress" style="height: 4px;">
+                    <div class="progress-bar bg-primary"
+                         data-totp="timerBar"
+                         style="width: 100%"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

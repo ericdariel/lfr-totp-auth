@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.monapp.totp.service.TOTPService" immediate="true">
+  <service>
+    <provide interface="com.monapp.totp.service.TOTPService"/>
+  </service>
+  <reference name="_expandoColumnLocalService" interface="com.liferay.expando.kernel.service.ExpandoColumnLocalService" field="_expandoColumnLocalService"/>
+  <reference name="_expandoTableLocalService" interface="com.liferay.expando.kernel.service.ExpandoTableLocalService" field="_expandoTableLocalService"/>
+  <reference name="_expandoValueLocalService" interface="com.liferay.expando.kernel.service.ExpandoValueLocalService" field="_expandoValueLocalService"/>
+  <implementation class="com.monapp.totp.service.TOTPService"/>
+</scr:component>

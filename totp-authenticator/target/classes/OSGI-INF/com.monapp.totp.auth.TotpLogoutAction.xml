@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.monapp.totp.auth.TotpLogoutAction" immediate="true">
+  <property name="key" type="String" value="logout.events.pre"/>
+  <service>
+    <provide interface="com.liferay.portal.kernel.events.LifecycleAction"/>
+  </service>
+  <reference name="_portal" interface="com.liferay.portal.kernel.util.Portal" field="_portal"/>
+  <implementation class="com.monapp.totp.auth.TotpLogoutAction"/>
+</scr:component>

@@ -1,0 +1,10 @@
+Bundle-Name: TOTP Fragments
+Bundle-SymbolicName: com.monapp.totp.fragments
+Bundle-Version: 1.0.6
+
+Web-ContextPath: /totp-fragments
+-dsannotations-options: inherit
+-plugin.resourcebundle: com.liferay.ant.bnd.resource.bundle.ResourceBundleLoaderAnalyzerPlugin
+Provide-Capability:\
+	liferay.language.resources;\
+		resource.bundle.base.name="content.Language"
