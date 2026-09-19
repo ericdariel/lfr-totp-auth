@@ -133,4 +133,6 @@ Secrets and backup codes are stored via **Expando** (Liferay Custom Fields):
 
 Create the columns in: Control Panel → Users → Custom Fields → User
 
+## Conclusion
+
 <img src="image.png" width="400" alt="Écran de login OTP" />
