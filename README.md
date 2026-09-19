@@ -132,3 +132,5 @@ Secrets and backup codes are stored via **Expando** (Liferay Custom Fields):
 - `totpBackupCodes` — Hashed backup codes (BCrypt), 5 single-use codes in `XXXX-XXXX-XXXX-XXXX` format (alphanumeric, no ambiguous characters)
 
 Create the columns in: Control Panel → Users → Custom Fields → User
+
+<img src="image.png" width="400" alt="Écran de login OTP" />
