@@ -18,8 +18,8 @@ import com.monapp.totp.util.TotpPendingLoginUtil;
 import com.monapp.totp.util.TotpRedirectUtil;
 import com.monapp.totp.util.TotpSessionUtil;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 
 /**
  * REST-layer helpers for user resolution, session flags, and redirects.

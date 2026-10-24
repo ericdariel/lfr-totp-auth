@@ -13,7 +13,8 @@ import org.junit.runner.RunWith;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
+
 import java.util.Base64;
 import java.util.HashSet;
 import java.util.List;

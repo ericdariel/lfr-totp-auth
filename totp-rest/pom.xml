@@ -18,17 +18,12 @@
     <dependencies>
         <dependency>
             <groupId>com.liferay.portal</groupId>
-            <artifactId>release.portal.api</artifactId>
+            <artifactId>release.dxp.api</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.service.component.annotations</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>javax.ws.rs</groupId>
-            <artifactId>javax.ws.rs-api</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>

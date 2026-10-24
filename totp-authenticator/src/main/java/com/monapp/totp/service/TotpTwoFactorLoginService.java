@@ -2,9 +2,9 @@ package com.monapp.totp.service;
 
 import com.liferay.portal.kernel.theme.ThemeDisplay;
 
-import javax.portlet.ActionRequest;
-import javax.portlet.ActionResponse;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.ActionResponse;
+import jakarta.servlet.http.HttpServletRequest;
 
 /**
  * OSGi service that implements step 1 of the MFA login flow for users in the
