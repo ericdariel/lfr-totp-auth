@@ -1,6 +1,5 @@
 package com.monapp.totp.rest.application;
 
-import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.json.JSONArray;
 import com.liferay.portal.kernel.json.JSONFactoryUtil;
 import com.liferay.portal.kernel.json.JSONObject;
@@ -474,6 +473,7 @@ public class TOTPRestApplication extends Application {
 		return (String)session.getAttribute("TOTP_TEMP_SECRET");
 	}
 
+	@SuppressWarnings("unchecked")
 	private List<String> _getBackupCodes(
 		HttpServletRequest request, String challenge) {
 
