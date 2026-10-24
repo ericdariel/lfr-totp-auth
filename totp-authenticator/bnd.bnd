@@ -12,9 +12,9 @@ Provide-Capability:\
 -includeresource: \
     @googleauth-1.5.0.jar,\
     @commons-codec-1.15.jar,\
-    @javase-3.5.1.jar,\
-    @core-3.5.1.jar,\
-    @jcommander-1.82.jar,\
+    @javase-3.5.4.jar,\
+    @core-3.5.4.jar,\
+    @jcommander-1.85.jar,\
     @jbcrypt-0.4.jar
 
 Import-Package: \

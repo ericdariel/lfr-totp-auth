@@ -12,10 +12,10 @@ import com.liferay.portal.kernel.util.Portal;
 import com.liferay.portal.kernel.util.WebKeys;
 import com.monapp.totp.service.TotpTwoFactorLoginService;
 
-import javax.portlet.ActionRequest;
-import javax.portlet.ActionResponse;
-import javax.portlet.PortletPreferences;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.ActionResponse;
+import jakarta.portlet.PortletPreferences;
+import jakarta.servlet.http.HttpServletRequest;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -31,10 +31,10 @@ import org.osgi.service.component.annotations.Reference;
 @Component(
 	immediate = true,
 	property = {
-		"javax.portlet.name=" + LoginPortletKeys.CREATE_ACCOUNT,
-		"javax.portlet.name=" + LoginPortletKeys.FAST_LOGIN,
-		"javax.portlet.name=" + LoginPortletKeys.FORGOT_PASSWORD,
-		"javax.portlet.name=" + LoginPortletKeys.LOGIN,
+		"jakarta.portlet.name=" + LoginPortletKeys.CREATE_ACCOUNT,
+		"jakarta.portlet.name=" + LoginPortletKeys.FAST_LOGIN,
+		"jakarta.portlet.name=" + LoginPortletKeys.FORGOT_PASSWORD,
+		"jakarta.portlet.name=" + LoginPortletKeys.LOGIN,
 		"mvc.command.name=/login/login",
 		"service.ranking:Integer=400"
 	},

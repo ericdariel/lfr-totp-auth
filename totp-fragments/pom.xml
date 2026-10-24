@@ -17,7 +17,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.liferay.portal</groupId>
-			<artifactId>release.portal.api</artifactId>
+			<artifactId>release.dxp.api</artifactId>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
