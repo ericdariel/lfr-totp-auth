@@ -77,9 +77,9 @@ enforcement is disabled until a valid name is configured.
 ## Main dependencies
 
 - `com.warrenstrange:googleauth:1.5.0`
-- `com.google.zxing:javase:3.5.1`
+- `com.google.zxing:javase:3.5.4`
 - `org.mindrot:jbcrypt:0.4`
-- Liferay Portal Kernel 7.4.x
+- Liferay Portal Kernel 2026.q1.9
 
 ---
 
