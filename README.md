@@ -4,7 +4,11 @@ Full two-factor authentication (2FA) implementation via Google Authenticator
 for Liferay users in a configurable regular role (default: Administrator),
 using OSGi services only (no ServiceUtil).
 
-Main branch is for version 2025.q1.x and you have a branch for version 2026.q1.9 (Jakarta version)
+Main branch is latest branch.
+You have a specific branch per version :
+
+* 2025.q1.x (original version)
+* 2026.q1.9 (Jakarta version)
 
 ---
 
